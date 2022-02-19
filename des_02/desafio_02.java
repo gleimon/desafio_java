@@ -1,3 +1,4 @@
+package des_02;
 //Validador de senha com critérios obrigatórios, entre eles: no mínimo 6 caracteres, 01 digito, 01 letra minuscula, 01 letra maiuscula e 01 caracter especial.
 
 import java.util.Scanner;
@@ -12,7 +13,9 @@ public class desafio_02 {
         numero_minimo_caracteres = 6;
         System.out.println("Usuário, por favor informe sua senha: ");
         senha = entrada_dados.nextLine();
-                      
+        System.out.println(numero_da_senha(senha));
+
+                             
             if(senha.length() >=6 && senha.matches(criterios_obrigatorios)){
                 System.out.println("Senha salva com sucesso!");
                 }else {
@@ -27,6 +30,19 @@ public class desafio_02 {
 
         entrada_dados.close();
     }
+
+    public static int numero_da_senha(String senha){           
+        int numero_minimo_caracteres, quantidade_caracter;
+    
+        quantidade_caracter = (senha.length());    
+        numero_minimo_caracteres = 6;
+        int calculo = (numero_minimo_caracteres - quantidade_caracter);
+        if (calculo < 0){
+            calculo = 0;
+        }                    
+                        
+        return calculo;  
+        }    
 }
 
     

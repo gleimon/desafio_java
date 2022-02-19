@@ -1,3 +1,4 @@
+package des_03;
 //Vai devolver o número de pares de substrings de uma palavra qualquer informada pelo usuário.
 //Por exemplo: se o usuário inserir a palavra abcde, vai devolver 0 (zero).
 //Se o usuário inserir a palavra ifailuhkqq, vai devolver 03 (três).
